@@ -1,0 +1,137 @@
+@import "compass/css3";
+.element{
+  margin: 0 auto;
+  text-align:left;
+  padding:130px 25px 150px 20px;
+  font-size:30px;
+  animation-name: stretch;
+  animation-duration: 2s; 
+  animation-timing-function: ease-in; 
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  opacity:.6;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  height:10%;
+  width:100%;
+  font:oblique small-caps bold Helvetica;
+  color:rgb(255,128,55);
+  position: center;
+  opacity:.5;
+}
+body {
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width:10%;
+  display: inline-block;
+}
+.w1 {
+  perspective: 1000px;
+  }
+.w2 {
+  perspective: 1000px;
+}
+.w3{
+	perspective:1000px;
+ }
+ .w4 {
+	perspective:1000px;
+ }
+.cube {
+  width:2em;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(-20deg);
+}
+.side {
+  opacity: .3;
+  position: absolute;
+  background-position: 0% 100%;
+  width:2em;
+  height:2em;
+  animation:fd 3s  alternate infinite ;
+  animation-delay:0s;
+  background-color:aqua;
+  border: 1px solid rgba(0,0,0,.5);
+  animation-timing-function:linear;
+  color: white; 
+  line-height: 2em;
+}
+@keyframes fd{
+  0%{
+    height:2em;
+  }
+  50%{
+    height:3em;
+  }
+  100%{
+    height:4em;
+    
+  }
+}
+.w2 .side{
+  position: absolute;
+  background-position: 0% 100%;
+  width: 2em;
+  height: 2em;
+  opacity: .3;
+  animation:ed 3s  alternate infinite ;
+  animation-delay:0s;
+  background-color:fuchsia;
+  border: 1px solid rgba(0,0,0,.5);
+  animation-timing-function:linear;
+  color: white; 
+  line-height: 2em;
+}
+.w3 .side{
+	opacity:.3;
+	position: absolute;
+	width:2em;
+	height:0em;
+	animation:hd 3s  alternate infinite ;
+	animation-delay:0s;
+	background-color: darkorange;
+	border: 1px solid rgba(0,0,0,.5);
+	animation-timing-function:linear;
+	color: white; 
+	line-height: 2em;
+}
+@keyframes ed{
+  0%{
+    height:1em;
+  }
+  50%{
+    height:3.5em;
+  }
+  100%{
+    height:5em;
+    
+  }
+}
+@keyframes hd{
+  0%{
+    height:0em;
+  }
+  50%{
+    height:1em;
+  }
+  100%{
+    height:5.3em;
+    
+  }
+}
+.xc{
+	margin-left: 35%;
+}
+.w4 .side{
+	.opacity:.3;
+	background-color:blue;
+}
+.front  { transform:                  translateZ(1em); }
+.right  { transform: rotateY( 90deg)  translateZ(1em); }
+.left   { transform: rotateY(-90deg)  translateZ(1em); }
+.back   { transform: rotateY(-180deg) translateZ(1em); }
